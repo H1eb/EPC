@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="images/">
+
+    <title>ИАД</title>
+
+    <meta name="description" content="Краткое описание презентации">
+    <meta name="author" content="Имя автора">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+    <link rel="stylesheet" href="css/user.css">
+	<link rel="stylesheet" href="css/tomorrow.css">
+	<link rel="stylesheet" href="css/cloud.css">
+</head>
+<body>
+
+    <div class="reveal"><div class="slides">
+        <section>
+                <h2>Нотация EPC</h2>
+                <p class="author">Выполнил: Сергеев Никита</p>
+                <p class="student">Студент ИОПС-23м</p>
+        </section>
+
+        <section>
+            <h4>EPC (Event-driven Process Chain)</h4>
+            <p>Событийная цепочка процессов. EPC предназначена для описания порядка выполнения Бизнес-процессов (БП) в виде последовательности действий, управляемых событиями и выполняемых исполнителями.</p>
+        </section>
+
+        <section>
+            <h4>Особенности EPC:</h4>
+            <ul>
+                <li>Нотация создавалась как нотация для работы с системой SAP R/3</li>
+                <li>Нотация ориентирована на описание высокоуровневых БП</li>
+                <li>Главное преимущество нотации в том, что в ней мало элементов</li>
+            </ul>
+        </section>
+       
+        <section>
+            <section>
+                <h5>Операторы в нотации EPC</h5>
+                <img src="images/operators.png" style="height: 300px;" alt="">     
+            </section>
+            <section>
+                <h5>Пример диаграммы EPC</h5>
+                <img src="images/example.png" style="height: 500px;" alt="">
+            </section>
+        </section>
+
+        <section>
+            <h4>eEPC</h4>
+            <section>
+                <p>extendedEPC (eEPC) - расширение нотации EPC</p>
+            </section>
+            <section>
+                <h5>Объекты:</h5>
+                <ul>
+                    <li>Организационная единица (organizationalunit)</li>
+                    <li>Документ (document)</li>
+                    <li>Прикладная система (applicationsystem)</li>
+                    <li>Кластер информации (cluster)</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h4>Соглашения о правилах размещения фигур на схеме</h4>
+            <section>
+                <ul>
+                    <li>Последовательность событий и функций располагают сверху вниз (лучше) или слева направо (если не хватает места)</li>
+                    <li>Элементы, обозначающие исполнителей, располагаются справа от функций</li>
+                    <li>Входящие документы слева вверху от функций; направление стрелки от документов к функции</li>
+                    <li>Исходящие документы слева внизу от функций; направление стрелки от функции к документам</li>
+                    <li>Элемент «Информация» располагается внизу справа от функции</li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>Элемент «Приложение» располагается вверху справа от функций. Связь без стрелки</li>
+                    <li>Элементы «База данных» и «Картотека» располагаются произвольно</li>
+                    <li>Элемент «Материальный поток» располагается слева от сопровождающих его документов с привязкой к документу линией без стрелки</li>
+                    <li>Элемент «Кластер» в случае использования в сочетании с фигурой «Документ» для обозначения документа в электронном виде располагается слева от соответствующего документа</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h4>Идентификация</h4>
+            <img src="images/example2.png" style="height: 300px;" alt="">
+        </section>
+
+        <section>
+            <h4>Пример</h4>
+            <section>
+                <h5>Исходные данные:</h5>
+                <ul>
+                    <li>Стейкхолдеры (заинтересованные в проекте лица) и бизнес-заказчики уже определены</li>
+                    <li>Процессы не описаны или описания процессов устарели, то есть необходимо описать процессы с нуля</li>
+                </ul>
+                <h5>Задачи от зазазчика</h5>
+                <ul>
+                    <li>Реализовать в ИС процесс выбора поставщика</li>
+                    <li>Описать процесс выбора поставщика в виде инструкций для пользователей</li>
+                </ul>
+            </section>
+            <section>
+                <h5>Задача реализации:</h5>
+                <ol>
+                    <li>Описать процесс в общем виде</li>
+                    <li>Поставить задачу по реализации процесса команде разработки</li>
+                </ol>
+            </section>
+            <section>
+                <h5>Кейсы:</h5>
+                <ol>
+                    <li>Автоматизация в ИС существующих в компании процессов</li>
+                    <li>Оптимизация текущих процессов или создание новых процессов, сопутствующих реализации ИС</li>
+                </ol>
+            </section>
+            <section>
+                <h5>Процесс выбора поставщика:</h5>
+                <ol>
+                    <li>Закупщик формирует требования к закупаемому оборудованию</li>
+                    <li>Закупщик организует и проводит тендер</li>
+                    <li>Закупщик выбирает лучшее предложение, представленное на тендере</li>
+                    <li>Закупщик заключает договор с выбранным поставщиком</li>
+                </ol>
+            </section>
+            <section>
+                <h5>Схема процесса выбора поставщика (BPMN)</h5>
+                <img src="images/scheme_BPMN.png" alt="">
+            </section>
+            <section>
+                <h5>Схема процесса выбора поставщика (EPC)</h5>
+                <img src="images/scheme_EPC.png" style="height: 400px;" alt="">
+            </section>
+            <section>
+                <h5>Задачи:</h5>
+                <ol>
+                    <li>Окончание тендера по таймеру</li>
+                    <li>Завершить процесс выбора поставщика, если при определении требований к оборудованию получено от руководителя получено уведомление об отмене поиска поставщика</li>
+                </ol>
+            </section>
+            <section>
+                <h5>Окончание тендера по таймеру (BPMN)</h5>
+                <img src="images/scheme_timer_BPMN.png" alt="">
+            </section>
+            <section>
+                <h5>Завершение процесса при получении уведомления (BPMN)</h5>
+                <img src="images/scheme_notif_BPMN.png" style="height: 300px;" alt="">
+            </section>
+            <section>
+                <h5>Окончание тендера по таймеру (EPC)</h5>
+                <img src="images/scheme_timer_EPC.png" style="height: 400px;" alt="">
+            </section>
+            <section>
+                <h5>Завершение процесса при получении уведомления (EPC)</h5>
+                <img src="images/scheme_notif_EPC.png" style="height: 350px;" alt="">
+            </section>
+        </section>
+        
+        <section>
+            <h2>Спасибо за внимание</h2>
+        </section>
+    </div></div>
+
+    <script src="js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: false,
+            slideNumber: true,
+            history: true,
+            dependencies: [
+                {
+                    src: 'js/highlight.js',
+                    async: true,
+                    condition: function () {
+                        return Boolean(document.querySelector('pre code'));
+                    },
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                }
+            ]
+        });
+    </script>
+
+</body>
+</html>
